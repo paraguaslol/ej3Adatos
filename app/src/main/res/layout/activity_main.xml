@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dmb.Ej3a.MainActivity">
+
+
+    <TextView
+        android:id="@+id/tw1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre:"
+        android:layout_alignBaseline="@+id/et1"
+        android:textSize="17dp"
+        android:layout_marginLeft="10dp"/>
+
+    <EditText
+        android:id="@+id/et1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Introduce tu nombre"
+        android:layout_toRightOf="@+id/tw1"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/tw2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DNI:"
+        android:textSize="17dp"
+        android:layout_below="@+id/tw1"
+        android:layout_marginTop="20dp"
+        android:layout_alignStart="@+id/tw1"/>
+
+    <EditText
+        android:id="@+id/et2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Introduce tu DNI"
+        android:layout_toRightOf="@+id/tw2"
+        android:layout_below="@+id/et1"
+        android:layout_alignStart="@+id/et1"/>
+
+    <TextView
+        android:id="@+id/tw3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fecha de \nNacimiento:"
+        android:layout_below="@+id/tw2"
+        android:layout_marginTop="20dp"
+        android:layout_alignStart="@+id/tw1"/>
+
+    <ImageButton
+        android:id="@+id/datePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/et1"
+        android:layout_below="@+id/et2"
+        android:layout_toRightOf="@+id/tw3"
+        app:srcCompat="@android:drawable/ic_menu_my_calendar"
+        android:onClick="datePicker"/>
+
+    <EditText
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et2"
+        android:layout_toRightOf="@+id/datePicker"
+        android:focusable="false"/>
+
+    <RadioGroup
+        android:id="@+id/rg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/date"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp">
+
+        <RadioButton
+            android:id="@+id/rb1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Masculino"/>
+
+        <RadioButton
+            android:id="@+id/rb2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Femenino" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/bt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Continuar"
+        android:layout_marginTop="65dp"
+        android:onClick="nextActivity"
+        android:layout_below="@+id/rg"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/bt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="resetFields"
+        android:text="Restablecer"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/bt1"
+        android:layout_centerHorizontal="true" />
+
+</android.widget.RelativeLayout>
